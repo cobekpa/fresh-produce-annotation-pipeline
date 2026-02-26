@@ -1,60 +1,124 @@
-# Local Market Produce Annotation Pipeline – Batch 1
+# Fresh Produce Annotation Pipeline
 
-## Project Overview
-This project involves **annotating real-world produce images** collected from local markets for four classes: **orange, pepper, tomato, and onion**.  
-The dataset was created to demonstrate **multi-class, multi-instance object detection annotation skills** using **CVAT** and exported in **YOLO format**.  
+A structured computer vision dataset project focused on multi-class object detection of fresh produce collected from a local market.
 
-It is intended as a **portfolio-ready dataset** to showcase annotation experience for remote image labeling projects.
+This project demonstrates:
 
----
-
-## Dataset Details
-
-- **Total Images:** 100  
-- **Total Annotated Object Instances:** 669  
-- **Classes and Instance Counts:**
-
-| Class  | Instances |
-|--------|----------|
-| Orange | 81       |
-| Pepper | 228      |
-| Tomato | 207      |
-| Onion  | 153      |
-
-- **Average objects per image:** ~6–7  
-- **Data type:** Raw images + YOLO annotation files  
-- **Annotation format:** YOLO 1.1  
-
-> Instance counts were derived by parsing YOLO annotation files (`.txt`), where each line represents one bounding box. Class IDs correspond to the labels defined in `obj.names`.
+- Image dataset organization
+- Bounding box annotation using CVAT
+- YOLO format export
+- Annotation validation using Python
+- Version-controlled dataset scaling (Batch-based workflow)
 
 ---
 
-## Tools Used
+## 📌 Project Overview
 
-- **CVAT** (Computer Vision Annotation Tool) for image annotation  
-- **Docker** for running CVAT locally  
-- **YOLO 1.1** for dataset export  
+The dataset contains real-world market images annotated for object detection using the YOLO format.
+
+### 🎯 Target Classes
+
+| Class ID | Class Name |
+|----------|------------|
+| 0 | Orange |
+| 1 | Pepper |
+| 2 | Tomato |
+| 3 | Onion |
+
+All annotations were created using CVAT and exported in YOLO format.
 
 ---
 
-## Folder Structure
-
-```text
+## 📂 Dataset Structure
 fresh-produce-annotation-pipeline/
 │
+├── annotation_guidelines/
+│ └── annotation_rules.md
+│
 ├── data/
-│   ├── images/
-│   │   └── batch_1/               ← Raw images
-│   └── annotations/
-│       └── batch_1_yolo/
-│           ├── labels/            ← YOLO .txt files
-│           └── obj.names          ← Class names
+│ ├── images/
+│ │ ├── batch_1/
+│ │ └── batch_2/
+│ │
+│ └── annotations/
+│ ├── batch_1_yolo/
+│ │ ├── labels/
+│ │ └── obj.names
+│ │
+│ └── batch_2_yolo/
+│ ├── labels/
+│ └── obj.names
+│
+├── notebook/
+│ └── count_instances.py
 │
 ├── samples/
-│   └── annotated_screenshots/     ← Screenshots from CVAT showing annotation quality
-│
-├── annotation_guidelines/
-│   └── annotation_rules.md        ← Annotation rules and guidelines
+│ └── annotated_screenshots/
 │
 ├── README.md
 └── requirements.txt
+
+
+---
+
+## 📊 Dataset Statistics
+
+### Batch 1
+
+- Images: **100**
+- Orange: **81 instances**
+- Pepper: **228 instances**
+- Tomato: **207 instances**
+- Onion: **153 instances**
+- **Total Instances: 669**
+
+---
+
+### Batch 2
+
+- Images: **100**
+- Orange: **97 instances**
+- Pepper: **216 instances**
+- Tomato: **175 instances**
+- Onion: **126 instances**
+- **Total Instances: 614**
+
+---
+
+## 📈 Combined Dataset Summary
+
+- **Total Images:** 200
+- Orange: 178 instances
+- Pepper: 444 instances
+- Tomato: 382 instances
+- Onion: 279 instances
+- **Grand Total Instances: 1,283**
+
+---
+
+## 🛠 Annotation Workflow
+
+1. Images collected from local market.
+2. Annotated using CVAT with bounding boxes.
+3. Exported in YOLO format.
+4. Verified using a custom Python script (`count_instances.py`).
+5. Organized into batch-based folder structure for scalability.
+
+---
+
+## 🔍 Annotation Guidelines
+
+Annotation rules and labeling standards are documented in:
+annotation_guidelines/annotation_rules.md
+
+
+These rules ensure consistency across batches.
+
+---
+
+## 🧪 Validation Script
+
+To count object instances per class:
+
+```bash
+python notebook/count_instances.py
