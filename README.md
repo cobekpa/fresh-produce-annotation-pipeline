@@ -30,6 +30,43 @@ All annotations were created using CVAT and exported in YOLO format.
 ---
 
 ## 📂 Dataset Structure
+
+
+---
+
+## 📊 Dataset Statistics
+
+### Batch 1
+- Images: 100  
+- Total Instances: 669  
+
+### Batch 2
+- Images: 100  
+- Total Instances: 614  
+
+### Batch 3
+- Images: 100  
+- Total Instances: 593  
+
+### Batch 4
+- Images: 89  
+- Total Instances: 465  
+---
+
+## 📈 Final Combined Dataset Statistics
+
+| Class   | Total Instances |
+|----------|----------------|
+| Orange   | 330 |
+| Pepper   | 840 |
+| Tomato   | 549 |
+| Onion    | 622 |
+
+**Total Images:** 389  
+**Grand Total Instances:** 2,341
+
+---
+## 📂 Project Structure
 fresh-produce-annotation-pipeline/
 │
 ├── annotation_guidelines/
@@ -38,16 +75,15 @@ fresh-produce-annotation-pipeline/
 ├── data/
 │ ├── images/
 │ │ ├── batch_1/
-│ │ └── batch_2/
+│ │ ├── batch_2/
+│ │ ├── batch_3/
+│ │ └── batch_4/
 │ │
 │ └── annotations/
 │ ├── batch_1_yolo/
-│ │ ├── labels/
-│ │ └── obj.names
-│ │
-│ └── batch_2_yolo/
-│ ├── labels/
-│ └── obj.names
+│ ├── batch_2_yolo/
+│ ├── batch_3_yolo/
+│ └── batch_4_yolo/
 │
 ├── notebook/
 │ └── count_instances.py
@@ -57,44 +93,6 @@ fresh-produce-annotation-pipeline/
 │
 ├── README.md
 └── requirements.txt
-
-
----
-
-## 📊 Dataset Statistics
-
-### Batch 1
-
-- Images: **100**
-- Orange: **81 instances**
-- Pepper: **228 instances**
-- Tomato: **207 instances**
-- Onion: **153 instances**
-- **Total Instances: 669**
-
----
-
-### Batch 2
-
-- Images: **100**
-- Orange: **97 instances**
-- Pepper: **216 instances**
-- Tomato: **175 instances**
-- Onion: **126 instances**
-- **Total Instances: 614**
-
----
-
-## 📈 Combined Dataset Summary
-
-- **Total Images:** 200
-- Orange: 178 instances
-- Pepper: 444 instances
-- Tomato: 382 instances
-- Onion: 279 instances
-- **Grand Total Instances: 1,283**
-
----
 
 ## 🛠 Annotation Workflow
 
