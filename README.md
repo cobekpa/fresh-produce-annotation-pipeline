@@ -30,7 +30,8 @@ All annotations were created using CVAT and exported in YOLO format.
 ---
 
 ## 📂 Project Structure
-fresh-produce-annotation-pipeline/
+<pre>
+```fresh-produce-annotation-pipeline/
 │
 ├── annotation_guidelines/
 │   └── annotation_rules.md
@@ -47,17 +48,8 @@ fresh-produce-annotation-pipeline/
 │       │   ├── labels/
 │       │   └── obj.names
 │       │
-│       ├── batch_2_yolo/
-│       │   ├── labels/
-│       │   └── obj.names
-│       │
-│       ├── batch_3_yolo/
-│       │   ├── labels/
-│       │   └── obj.names
-│       │
-│       └── batch_4_yolo/
-│           ├── labels/
-│           └── obj.names
+│       ├── labels/
+│           ├── obj.names        
 │
 ├── notebook/
 │   └── count_instances.py
@@ -71,7 +63,7 @@ fresh-produce-annotation-pipeline/
 │
 ├── README.md
 └── requirements.txt
-
+```</pre>
 ---
 
 ## 📊 Dataset Statistics
