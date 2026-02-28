@@ -29,8 +29,48 @@ All annotations were created using CVAT and exported in YOLO format.
 
 ---
 
-## 📂 Dataset Structure
-
+## 📂 Project Structure
+fresh-produce-annotation-pipeline/
+│
+├── annotation_guidelines/
+│   └── annotation_rules.md
+│
+├── data/
+│   ├── images/
+│   │   ├── batch_1/
+│   │   ├── batch_2/
+│   │   ├── batch_3/
+│   │   └── batch_4/
+│   │
+│   └── annotations/
+│       ├── batch_1_yolo/
+│       │   ├── labels/
+│       │   └── obj.names
+│       │
+│       ├── batch_2_yolo/
+│       │   ├── labels/
+│       │   └── obj.names
+│       │
+│       ├── batch_3_yolo/
+│       │   ├── labels/
+│       │   └── obj.names
+│       │
+│       └── batch_4_yolo/
+│           ├── labels/
+│           └── obj.names
+│
+├── notebook/
+│   └── count_instances.py
+│
+├── samples/
+│   └── annotated_screenshots/
+│       ├── batch_1/
+│       ├── batch_2/
+│       ├── batch_3/
+│       └── batch_4/
+│
+├── README.md
+└── requirements.txt
 
 ---
 
@@ -65,34 +105,6 @@ All annotations were created using CVAT and exported in YOLO format.
 **Total Images:** 389  
 **Grand Total Instances:** 2,341
 
----
-## 📂 Project Structure
-fresh-produce-annotation-pipeline/
-│
-├── annotation_guidelines/
-│ └── annotation_rules.md
-│
-├── data/
-│ ├── images/
-│ │ ├── batch_1/
-│ │ ├── batch_2/
-│ │ ├── batch_3/
-│ │ └── batch_4/
-│ │
-│ └── annotations/
-│ ├── batch_1_yolo/
-│ ├── batch_2_yolo/
-│ ├── batch_3_yolo/
-│ └── batch_4_yolo/
-│
-├── notebook/
-│ └── count_instances.py
-│
-├── samples/
-│ └── annotated_screenshots/
-│
-├── README.md
-└── requirements.txt
 
 ## 🛠 Annotation Workflow
 
